@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fef9f0;
+  --color-warm-white: #fffdf7;
+  --color-espresso: #2d2a26;
+  --color-mocha: #5c5347;
+  --color-amber: #c17f3e;
+  --color-amber-light: #d4a057;
+  --color-rose: #c46b6b;
+  --color-rose-light: #f2d7d5;
+  --color-sage: #8a9a7b;
+  --color-tan: #e8ddcc;
+  --color-tan-dark: #d4c4a8;
+  --color-golden: #f5e6c8;
+  --color-charcoal: #1a1815;
+}
+
+body {
+  margin: 0;
+  font-family: 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-espresso);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-tan-dark); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-mocha); }
+
+.message-action {
+  color: var(--color-rose);
+  font-style: italic;
+}
+
+/* Subtle noise texture overlay */
+.noise-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+}
